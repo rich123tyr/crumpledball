@@ -22,7 +22,10 @@ function setup() {
 
 	//Create the Bodies Here.
 	crush = new Paper(100,650)
-	dutbin = new Dustbin(650,650,60,15);
+	dutbin1 = new Dustbin(650,650,60,15);
+	dustbin2 = new Dustbin(630,600,15,60);
+	dustbin3 = new Dustbin(670,600,15,60);
+
 	
 	ground = createSprite(400,670,800,20);
 	World.add(world, ground);
@@ -39,10 +42,17 @@ function draw() {
 
 	crush.display();
 	dustbin1.display();
+	dustbin2.display();
+	dustbin3.display();
   
   drawSprites();
  
 }
 
+function keyPressed(){
+	if(keyCode == UP_ARROW){
+		Body.applyForce(crush, crush.position, {x:570,y:600})
+	}
+}
 
 
