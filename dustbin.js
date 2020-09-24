@@ -8,6 +8,7 @@ class Dustbin {
       this.body = Bodies.rectangle(x, y, width, height, options);
       this.width = width;
       this.height = height;
+      this.image = loadImage("dustbingreen.png");
       
       World.add(world, this.body);
     }
@@ -20,7 +21,8 @@ class Dustbin {
       rotate(angle);
       rectMode(CENTER);
       fill(255);
-      rect(0,0, this.width, this.height);               
+      rect(0,0, this.width, this.height);   
+      image(this.image, 0, 0, this.width, this.height);            
       pop();
     }
   }
