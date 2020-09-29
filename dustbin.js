@@ -13,15 +13,15 @@ class Dustbin {
       World.add(world, this.body);
     }
     display(){
-      var pos =this.body.position;
+      var pos = this.body.position;
       var angle = this.body.angle
       push();
       translate(pos.x,pos.y)
       angleMode(RADIANS);
       rotate(angle);
-      rectMode(CENTER);
-      fill(255);
-      rect(0,0, this.width, this.height);   
+      //rectMode(CENTER);
+      //fill(255);
+      //rect(0,0, this.width, this.height);   
       image(this.image, 0, 0, this.width, this.height);            
       pop();
     }

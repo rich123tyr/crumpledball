@@ -8,8 +8,7 @@ var grund;
 var crush;
 var dustbin1,dustbin2,dustbin3;
 
-function preload()
-{
+function preload(){
 	
 }
 
@@ -22,9 +21,9 @@ function setup() {
 
 	//Create the Bodies Here.
 	crush = new Paper(100,650)
-	dutbin1 = new Dustbin(650,650,60,15);
-	dustbin2 = new Dustbin(630,600,15,60);
-	dustbin3 = new Dustbin(670,600,15,60);
+	dustbin1 = new Dustbin(640,610,60,15);
+	dustbin2 = new Dustbin(630,560,15,60);
+	dustbin3 = new Dustbin(690,560,15,60);
 
 	
 	ground = createSprite(400,670,800,20);

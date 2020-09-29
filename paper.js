@@ -17,9 +17,10 @@ class Paper{
         translate(pos.x,pos.y)
         angleMode(RADIANS);
         rotate(angle);
-        image(this.image,0,0,this.widt)
-        circle(0,0,);  
-        fill(255);
+        image(this.Image,0,0)
+        //circle(0,0);  
+        //fill(255);
+        pop();
 
     }
 }
