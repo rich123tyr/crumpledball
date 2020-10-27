@@ -20,14 +20,14 @@ function setup() {
 	world = engine.world;
 
 	//Create the Bodies Here.
-	crush = new Paper(100,650)
-	dustbin1 = new Dustbin(640,610,60,15);
-	dustbin2 = new Dustbin(630,560,15,60);
-	dustbin3 = new Dustbin(690,560,15,60);
+	crush = new Paper(100,550,20)
+	dustbin1 = new Dustbin(660,630,250,25);
+	dustbin2 = new Dustbin(550,535,25,200);
+	dustbin3 = new Dustbin(770,535,25,200);
 
 	
-	ground = createSprite(400,670,800,20);
-	World.add(world, ground);
+	ground =new Ground(400,670,800,20);
+	
 
 	Engine.run(engine);
   
@@ -43,6 +43,7 @@ function draw() {
 	dustbin1.display();
 	dustbin2.display();
 	dustbin3.display();
+	ground.display();
   
   drawSprites();
  
@@ -50,7 +51,7 @@ function draw() {
 
 function keyPressed(){
 	if(keyCode == UP_ARROW){
-		Body.applyForce(crush, crush.position, {x:570,y:600})
+		Body.applyForce(crush.body, crush.body.position, {x:45,y:-90})
 	}
 }
 

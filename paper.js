@@ -1,13 +1,14 @@
 class Paper{
-    constructor(x,y){
+    constructor(x,y,radius){
         var options = {
             isStatic:false,
             restitution:0.3,
             friction:0.5,
             density:1.2,
         }
-        this.body = Bodies.circle(x, y, 10,options);
-        this.Image = loadImage("paper.png")
+        this.body = Bodies.circle(x, y, radius,options);
+        this.radius = radius;
+        //this.Image = loadImage("paper.png")
         World.add(world, this.body);
     }
     display(){
@@ -17,9 +18,9 @@ class Paper{
         translate(pos.x,pos.y)
         angleMode(RADIANS);
         rotate(angle);
-        image(this.Image,0,0)
-        //circle(0,0);  
-        //fill(255);
+        //image(this.Image,0,0)
+        circle(0,0,this.radius*2);  
+        fill(255);
         pop();
 
     }
